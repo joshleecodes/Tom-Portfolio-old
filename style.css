@@ -1,0 +1,158 @@
+html, body {
+    margin: 0;
+    height: 98vh;
+    width: 100vw;
+}
+
+body {
+    font-size: 100%;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    background-image:url(_assets/img/background.png);
+    background-size: cover;
+}
+
+h1,h2,h3,a,p {
+    color: white;
+}
+
+header {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 2vh;
+}
+
+a {
+    cursor: pointer;
+}
+
+.title {
+    width:15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid white;
+}
+
+.last-name h2{
+    color: #DC8C20;
+}
+
+.social-media {
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media a {
+    margin: 0 2%;
+}
+
+.social-media img {
+    width: 1.5vw;
+}
+
+.nav {
+    width: 75vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 3%;
+    font-size: 1.4em;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: #DC8C20;
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 2vh;
+    
+}
+
+.side-section {
+    width: 15vw;
+    height: 86vh;
+    display: flex;
+    border-right: 2px solid white;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.side-section a {
+    margin: 5% 5%;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.side-section img {
+    width: 0.7vw;
+}
+
+.main-section {
+    display: flex;
+    width: 85vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-left {
+    width: 30vw;
+    margin: 0 2vw;
+}
+
+.main-right {
+    width: 30vw;
+    margin: 0 2vw;
+}
+
+.gaming-right {
+    width: inherit;
+}
+
+.layered {
+    position: absolute;
+    width: 30vw;
+    top: 30vh;
+    transition: all 0.5s;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+//mobile res layout
+@media only screen and (max-width: 320px) {
+    
+}
+
+//tablet or laptop res layout
+@media only screen and (max-width: 720px) {
+    
+}
+
+//desktop res layout
+@media only screen and (max-width: 1024px) {
+    
+}

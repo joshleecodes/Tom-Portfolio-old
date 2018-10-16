@@ -1,0 +1,16 @@
+Hours spent: 15
+
+TO DO:
+
+animated active nav bar
+highlight active page dot
+media queries (from tablets to desktop)
+
+Video background
+<video autoplay>
+    <source ...> <! -- webm source -->
+    <source ...> <! -- mp4 source -->
+</video>
+
+
+Look into shared classes for pages (eg. <div class="about page1"> and <div class="gaming page1">)
