@@ -8,9 +8,8 @@ body {
     font-size: 100%;
     font-family: "Lato", sans-serif;
     text-align: center;
-    background-image:url(_assets/img/background/background.png);
+    background-image:url(_assets/img/background.png);
     background-size: cover;
-    overflow: hidden;
 }
 
 h1,h2,h3,a,p {
@@ -39,7 +38,7 @@ a {
 }
 
 .last-name h2{
-    color: #ff8305;
+    color: #DC8C20;
 }
 
 .social-media {
@@ -47,8 +46,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
+
 .social-media a {
     margin: 0 2%;
 }
@@ -56,20 +55,6 @@ a {
 .social-media img {
     width: 1.5vw;
 }
-
-.twitter {
-    opacity: 1;
-}
-
-.top-img {
-    position: absolute;
-    transition: all 0.4s;
-}
-
-.top-img:hover {
-    opacity: 0;
-}
-
 
 .nav {
     width: 75vw;
@@ -83,82 +68,19 @@ nav a {
     font-size: 1.4em;
     font-weight: bolder;
     text-decoration: none;
-    position: relative;
 }
 
-nav a:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    border-bottom: 2px solid #ff8305;
-    transition: 0.4s;
-    margin-bottom: -2px;
-}
-
-nav a:hover:after {
-    width: 100%;
-}
-
-.page-visible {
-    opacity: 1;
-    visibility: visible;
-    border-right: 2px solid white;
-    margin-right: -2px;
-    transition: 0.4s;
-}
-
-.page-hidden {
-    opacity: 0;
-    visibility: hidden;
-    margin-right: -2px;
-    transition: 0.4s;
-}
-
-.active {
-    border-right: 2px solid #ff8305;
-    margin-right: -2px;
-    transition: 0.4s;
-}
-
-.layered {
-    position: absolute;
-    transition: all 0.5s;
-}
-
-.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.selected {
-    border-bottom: 2px solid #ff8305;
-    margin-bottom: -2px;
+nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: #DC8C20;
 }
 
 .content-wrapper {
     display: flex;
     width: 100vw;
     height: auto;
-    margin-bottom: 2vh; 
-}
-
-.main-section {
-    display: flex;
-    width: 85vw;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.entry-img {
-    min-width: 85vw;
+    margin-bottom: 2vh;
+    
 }
 
 .side-section {
@@ -171,19 +93,22 @@ nav a:hover:after {
     align-items: flex-end;
 }
 
-.side-section img {
-    width: 0.7vw;
-}
-
 .side-section a {
-    padding: 5% 5%;
+    margin: 5% 5%;
     font-weight: bold;
     font-size: 1.2em;
 }
 
+.side-section img {
+    width: 0.7vw;
+}
 
-
-
+.main-section {
+    display: flex;
+    width: 85vw;
+    justify-content: center;
+    align-items: center;
+}
 
 .main-left {
     width: 30vw;
