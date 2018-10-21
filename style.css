@@ -158,7 +158,7 @@ nav a:hover:after {
 }
 
 .entry-img {
-    min-width: 85vw;
+    width: 85vw;
 }
 
 .side-section {
@@ -197,13 +197,6 @@ nav a:hover:after {
 
 .gaming-right {
     width: inherit;
-}
-
-.layered {
-    position: absolute;
-    width: 30vw;
-    top: 30vh;
-    transition: all 0.5s;
 }
 
 .visible {

@@ -1,9 +1,10 @@
 'use strict';
 
 document.addEventListener("DOMContentLoaded", function(){
-    var currSection = 1;
+    var currSection = 0;
     
     //Section vars
+    var titleSection = document.querySelector('.title');
     var aboutSection = document.querySelector('.about');
     var engineerSection = document.querySelector('.engineering');
     var gamingSection = document.querySelector('.gaming');
@@ -16,9 +17,9 @@ document.addEventListener("DOMContentLoaded", function(){
     var page3 = document.querySelector('.page-3');
     
     //content vars
+    var title1 = document.querySelector('.entry-img');
     var about1 = document.querySelector('.about-1');
     var about2 = document.querySelector('.about-2');
-    //var about3 = document.querySelector('.about-3');
     var gaming1 = document.querySelector('.gaming-1');
     var gaming2 = document.querySelector('.gaming-2');
     var engineering1 = document.querySelector('.engineering-1');
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function(){
     page3.addEventListener("click", displayPage3);
     
     //Section Event Listeners
+    titleSection.addEventListener("click", setSection.bind(this, 0, 0));
     aboutSection.addEventListener("click", setSection.bind(this, 1, 2));
     engineerSection.addEventListener("click", setSection.bind(this, 2, 2));
     gamingSection.addEventListener("click", setSection.bind(this, 3, 1));
@@ -48,21 +50,20 @@ document.addEventListener("DOMContentLoaded", function(){
     function activeSection(section){ 
         if(currSection !== section){ //check selected section is not already active
             //remove current underline
+            if(currSection === 0){
+                titleSection.classList.remove("selected"); 
+            }
             if(currSection === 1){
                 aboutSection.classList.remove("selected");
-                console.log("remove1");
             }
             if(currSection === 2){
                 engineerSection.classList.remove("selected");
-                console.log("remove2");
             }
             if(currSection === 3){
                 gamingSection.classList.remove("selected");
-                console.log("remove3");
             }
             if(currSection === 4){
                 mediaSection.classList.remove("selected");
-                console.log("remove3");
             }
             
             //add new underline
@@ -83,7 +84,16 @@ document.addEventListener("DOMContentLoaded", function(){
     
     //change number of buttons for section
     function numOfPages(dots){
-        if(dots === 1) {
+        if(dots === 0){
+            page1.classList.remove("page-visible");
+            page1.classList.add("page-hidden");
+            page2.classList.remove("page-visible");
+            page2.classList.add("page-hidden");
+            page3.classList.remove("page-visible");
+            page3.classList.add("page-hidden");
+        }
+        
+        if(dots === 1){
             page1.classList.remove("page-hidden");
             page1.classList.add("page-visible");
             page2.classList.remove("page-visible");
@@ -91,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function(){
             page3.classList.remove("page-visible");
             page3.classList.add("page-hidden");
         }
-        else if(dots === 2) {
+        else if(dots === 2){
             page1.classList.remove("page-hidden");
             page1.classList.add("page-visible");
             page2.classList.remove("page-hidden");
@@ -99,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function(){
             page3.classList.remove("page-visible");
             page3.classList.add("page-hidden");
         }
-        else if(dots === 1) {
+        else if(dots === 3){
             page1.classList.remove("page-hidden");
             page1.classList.add("page-visible");
             page2.classList.remove("page-hidden");
@@ -110,7 +120,12 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     
     
-    function clearPages() {
+    function clearPages(){
+        
+        //clear landing page
+        title1.classList.remove("visible");
+        title1.classList.add("hidden");
+        
         //clear about
         about1.classList.remove("visible");
         about1.classList.add("hidden");
@@ -137,6 +152,10 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     
     function displayPage1() {
+        if(currSection === 0){
+            title1.classList.remove("hidden");
+            title1.classList.add("visible");
+        }
         if(currSection === 1){
             about1.classList.remove("hidden");
             about1.classList.add("visible");
