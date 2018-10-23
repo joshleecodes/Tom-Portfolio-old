@@ -30,6 +30,10 @@ a {
     cursor: pointer;
 }
 
+h3 {
+    color: #ff8305;
+}
+
 .title {
     width:15vw;
     display: flex;
@@ -43,7 +47,7 @@ a {
 }
 
 .social-media {
-    width: 10vw;
+    width: 14vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +76,7 @@ a {
 
 
 .nav {
-    width: 75vw;
+    width: 70vw;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -93,7 +97,7 @@ nav a:after {
     left: 0;
     width: 0%;
     border-bottom: 2px solid #ff8305;
-    transition: 0.4s;
+    transition: 0.4s ;
     margin-bottom: -2px;
 }
 
@@ -119,17 +123,17 @@ nav a:hover:after {
 .active {
     border-right: 2px solid #ff8305;
     margin-right: -2px;
-    transition: 0.4s;
+    transition: all 0.4; 
 }
 
 .layered {
     position: absolute;
-    transition: all 0.5s;
 }
 
 .visible {
     opacity: 1;
     visibility: visible;
+    transition: all 0.4s;
 }
 
 .hidden {
@@ -171,31 +175,97 @@ nav a:hover:after {
 
 .main-section {
     display: flex;
-    width: 85vw;
+    width: 75vw;
     height: 86vh;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    margin: 0 5vw;
+    text-align: left;
+}
+
+.main-left {
+    display: flex;
+    width: 37.5vw;
+    justify-content: space-around;
+}
+
+.main-right {
+    display: flex;
+    width: 37.5vw;
+    justify-content: space-around;
+}
+
+.content-left {
+    width: inherit;
+    align-self: center;
+}
+
+.content-right {
+    width: inherit;
+    align-self: center;
 }
 
 .entry-img {
     width: 50vw;
 }
 
-.main-left {
-    display: flex;
-    width: 30vw;
-    margin: 0 2vw;
-    align-self: stretch;
+.engineering-img {
+    width: 75vw;
 }
 
-.main-right {
-    width: 30vw;
-    margin: 0 2vw;
+.about-1-right img {
+    width: 25vw;
+    margin-left: 4vw;
 }
 
-.gaming-right {
+.gaming-1-right {
     width: inherit;
+    margin-left: 4vw;
+}
+
+.gaming-1-right img {
+    width: 35vw;
+}
+
+.gaming-2 {
+    border-right: 2px solid white;
+}
+
+.event {
+    display: flex;
+    justify-content; 
+    max-width: 35vw;
+}
+
+.org-img {
+    height: 15vh;
+}
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.event-name h3 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+.event-date p {
+    font-weight: bold;
+}
+
+.gaming-2 h3 {
+    font-size: 1.7em;
+}
+
+.result-img {
+    height: 5vh;
+    align-self: center;
+    margin: 0vh 0vw 5vh 1vw;
 }
 
 .visible {

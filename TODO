@@ -2,8 +2,16 @@ Hours spent: 15
 
 TO DO:
 
-animated active nav bar
-highlight active page dot
+content-right to show
+change .gaming to .esports
+
+Sort page content:
+About - 1) Text/grad photo
+Engineering - 1) Modules
+Esports - 1) Text/img slider 
+        - 2) tourny results
+Media -  Fit current media content (can be multiple pages)
+
 media queries (from tablets to desktop)
 
 Video background
@@ -15,6 +23,9 @@ Video background
 
 Look into shared classes for pages (eg. <div class="about page1"> and <div class="gaming page1">)
 
+
+ASK TOM:
+Grad photo version
 
 
 USEFUL LINKS:

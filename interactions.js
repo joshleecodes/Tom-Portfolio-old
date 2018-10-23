@@ -19,22 +19,47 @@ document.addEventListener("DOMContentLoaded", function(){
     //content vars
     var title1 = document.querySelector('.entry-img');
     var about1 = document.querySelector('.about-1');
-    var about2 = document.querySelector('.about-2');
-    var gaming1 = document.querySelector('.gaming-1');
-    var gaming2 = document.querySelector('.gaming-2');
+    var about1right = document.querySelector('.about-1-right');
     var engineering1 = document.querySelector('.engineering-1');
-    
+    var gaming1 = document.querySelector('.gaming-1');
+    var gaming1right = document.querySelector('.gaming-1-right');
+    var gaming2 = document.querySelector('.gaming-2');
+    var gaming2right = document.querySelector('.gaming-2-right');
     
     //Page Event Listeners
     page1.addEventListener("click", displayPage1);
     page2.addEventListener("click", displayPage2);
     page3.addEventListener("click", displayPage3);
     
+    gaming1.addEventListener("wheel", function(e) {
+        if(e.deltaY > 0) {
+            displayPage2();
+        }
+    });
+    
+    gaming1right.addEventListener("wheel", function(e) {
+        if(e.deltaY > 0) {
+            displayPage2();
+        }
+    });
+    
+    gaming2.addEventListener("wheel", function(e) {
+        if(e.deltaY < 0) {
+            displayPage1();
+        }
+    });
+    
+    gaming2right.addEventListener("wheel", function(e) {
+        if(e.deltaY < 0) {
+            displayPage1();
+        }
+    });
+    
     //Section Event Listeners
     titleSection.addEventListener("click", setSection.bind(this, 0, 0));
-    aboutSection.addEventListener("click", setSection.bind(this, 1, 2));
-    engineerSection.addEventListener("click", setSection.bind(this, 2, 2));
-    gamingSection.addEventListener("click", setSection.bind(this, 3, 1));
+    aboutSection.addEventListener("click", setSection.bind(this, 1, 0));
+    engineerSection.addEventListener("click", setSection.bind(this, 2, 0));
+    gamingSection.addEventListener("click", setSection.bind(this, 3, 2));
     mediaSection.addEventListener("click", setSection.bind(this, 4, 0));
 
     //Clear old pages, update tracker and display new pages
@@ -129,14 +154,18 @@ document.addEventListener("DOMContentLoaded", function(){
         //clear about
         about1.classList.remove("visible");
         about1.classList.add("hidden");
-        about2.classList.remove("visible");
-        about2.classList.add("hidden");
+        about1right.classList.remove("visible");
+        about1right.classList.add("hidden");
         
         //clear gaming
         gaming1.classList.remove("visible");
         gaming1.classList.add("hidden");
+        gaming1right.classList.remove("visible");
+        gaming1right.classList.add("hidden");
         gaming2.classList.remove("visible");
         gaming2.classList.add("hidden");
+        gaming2right.classList.remove("visible");
+        gaming2right.classList.add("hidden");
         
         //clear engineering
         engineering1.classList.remove("visible");
@@ -159,8 +188,8 @@ document.addEventListener("DOMContentLoaded", function(){
         if(currSection === 1){
             about1.classList.remove("hidden");
             about1.classList.add("visible");
-            about2.classList.remove("visible");
-            about2.classList.add("hidden");
+            about1right.classList.remove("hidden");
+            about1right.classList.add("visible");
         }
         else if(currSection === 2){
             engineering1.classList.remove("hidden");
@@ -169,8 +198,12 @@ document.addEventListener("DOMContentLoaded", function(){
         else if(currSection === 3) {
             gaming1.classList.remove("hidden");
             gaming1.classList.add("visible");
+            gaming1right.classList.remove("hidden");
+            gaming1right.classList.add("visible");
             gaming2.classList.remove("visible");
             gaming2.classList.add("hidden");
+            gaming2right.classList.remove("visible");
+            gaming2right.classList.add("hidden");
         }
         page1.innerHTML = '<img src="_assets/img/pageIcons/pages-orange.png">';
         page1.classList.add("active");
@@ -184,8 +217,8 @@ document.addEventListener("DOMContentLoaded", function(){
         if(currSection === 1) {
             about1.classList.remove("visible");
             about1.classList.add("hidden");
-            about2.classList.remove("hidden");
-            about2.classList.add("visible");
+            about1right.classList.remove("visible");
+            about1right.classList.add("hidden");
         }
         else if(currSection === 2) {
             engineering1.classList.remove("visible");
@@ -194,8 +227,12 @@ document.addEventListener("DOMContentLoaded", function(){
         else if(currSection === 3) {
             gaming1.classList.remove("visible");
             gaming1.classList.add("hidden");
+            gaming1right.classList.remove("visible");
+            gaming1right.classList.add("hidden");
             gaming2.classList.remove("hidden");
             gaming2.classList.add("visible");
+            gaming2right.classList.remove("hidden");
+            gaming2right.classList.add("visible");
         }
         page1.innerHTML = '<img src="_assets/img/pageIcons/pages.svg">';
         page1.classList.remove("active");
@@ -209,8 +246,8 @@ document.addEventListener("DOMContentLoaded", function(){
         if(section === 1) {
             about1.classList.remove("visible");
             about1.classList.add("hidden");
-            about2.classList.remove("visible");
-            about2.classList.add("hidden");
+            about1right.classList.remove("visible");
+            about1right.classList.add("hidden");
         }
         else if(section === 2) {
             engineering1.classList.remove("visible");
@@ -219,8 +256,12 @@ document.addEventListener("DOMContentLoaded", function(){
         else if(section === 3) {
             gaming1.classList.remove("visible");
             gaming1.classList.add("hidden");
+            gaming1right.classList.remove("visible");
+            gaming1right.classList.add("hidden");
             gaming2.classList.remove("visible");
             gaming2.classList.add("hidden");
+            gaming2right.classList.remove("visible");
+            gaming2right.classList.add("hidden");
         }
         page1.innerHTML = '<img src="_assets/img/pageIcons/pages.svg">';
         page1.classList.remove("active");
