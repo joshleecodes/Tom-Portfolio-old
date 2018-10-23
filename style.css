@@ -149,18 +149,6 @@ nav a:hover:after {
     margin-bottom: 2vh; 
 }
 
-.main-section {
-    display: flex;
-    width: 85vw;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.entry-img {
-    width: 85vw;
-}
-
 .side-section {
     width: 15vw;
     height: 86vh;
@@ -181,13 +169,24 @@ nav a:hover:after {
     font-size: 1.2em;
 }
 
+.main-section {
+    display: flex;
+    width: 85vw;
+    height: 86vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
 
-
-
+.entry-img {
+    width: 50vw;
+}
 
 .main-left {
+    display: flex;
     width: 30vw;
     margin: 0 2vw;
+    align-self: stretch;
 }
 
 .main-right {
