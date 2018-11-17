@@ -1,20 +1,19 @@
 html, body {
     margin: 0;
-    height: 98vh;
+    height: 100vh;
     width: 100vw;
 }
 
 body {
     font-size: 100%;
-    font-family: "Lato", sans-serif;
+    font-family: 'PT Sans', sans-serif;
     text-align: center;
-    background-image:url(_assets/img/background/background.png);
     background-size: cover;
     overflow: hidden;
 }
 
 h1,h2,h3,a,p {
-    color: white;
+    color: white;   
 }
 
 header {
@@ -34,12 +33,24 @@ h3 {
     color: #ff8305;
 }
 
+.landingVid {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: fill;
+    z-index: 0;
+    visibility: visible;
+}
+
 .title {
     width:15vw;
     display: flex;
     align-items: center;
     justify-content: center;
     border-right: 2px solid white;
+    z-index: 1;
 }
 
 .last-name h2{
@@ -161,6 +172,7 @@ nav a:hover:after {
     justify-content: center;
     flex-direction: column;
     align-items: flex-end;
+    z-index: 1;
 }
 
 .side-section img {
@@ -210,8 +222,14 @@ nav a:hover:after {
     width: 50vw;
 }
 
-.engineering-img {
-    width: 75vw;
+.about-1 {
+    margin-top: -2vh;
+}
+
+.about-1-description {
+    background-color:rgba(0,0,0,0.8);
+    border-top: 2px solid white;
+    padding: 0 1vw 1vh 1vw;
 }
 
 .about-1-right img {
@@ -219,13 +237,97 @@ nav a:hover:after {
     margin-left: 4vw;
 }
 
+.engineering-1 {
+    display: flex;
+    justify-content: space-around;
+    width: inherit;
+    height: inherit;
+}
+
+.module-container {
+    width: 15vw;
+    margin-top: 8vw;
+}
+
+.label-wrapper {
+    display: block;
+    width: inherit;
+    height: 3vh;
+}
+
+.percentage-wrapper {
+    display: flex;
+    width: 7vw;
+    height: 100%;
+    float: right;
+    justify-content: center;
+    background-color: #f06200;
+    opacity: 0.8;
+}
+
+.percentage-wrapper h3 {
+    color: white;
+    margin: 5% 0 0 0;
+    font-size: 0.8em;
+}
+
+.level-wrapper {
+    background-color: #ff8305;
+    height: 5vh;
+    padding-top: 2%;
+    opacity: 0.8;
+}
+
+.level-wrapper h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+.module-list {
+    margin: 0;
+    padding: 1.5vh 1.5vw;
+}
+
+.module {
+    padding: 0.5vw 0;
+    list-style-type: none;
+    color: white;
+    font-weight: bold;
+}
+    
+.modules-wrapper {
+    background-color:rgba(0,0,0,0.8);
+    border: solid 2px #ff8305;
+}
+
+.gaming-1-description {
+    background-color:rgba(0,0,0,0.8);
+    border-top: 2px solid white;
+    padding: 0 1vw 1vh 1vw;
+}
+
 .gaming-1-right {
     width: inherit;
     margin-left: 4vw;
 }
 
-.gaming-1-right img {
-    width: 35vw;
+.imgSlider {
+    border: 3px solid #ff8305;
+    background-size: contain;
+    width: 31vw;
+    height: 34.15vh;
+}
+
+.esportsSlider {
+    display: none;
+    width: inherit;
+    height: inherit;
+    transition: all 0.4s;
+}
+
+.gaming-2, .gaming-2-right {
+    background-color:rgba(0,0,0,0.8);
 }
 
 .gaming-2 {
@@ -266,6 +368,109 @@ nav a:hover:after {
     height: 5vh;
     align-self: center;
     margin: 0vh 0vw 5vh 1vw;
+}
+
+.media-1, .media-2, .media-3 {
+    width: 75vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.media-2 { 
+    width: 85vw;
+}
+
+.media-1-left{
+    width: 55%;
+    margin-top: 2vw;
+}
+
+.media-1-right{
+    width: 45%;
+}
+
+.media-info {
+    background-color:rgba(0,0,0,0.8);
+    border-top: 2px solid #ff8305;
+    padding: 0 1vw 1vh 1vw;
+}
+
+.media-2-left {
+    width: 50%;
+    border-right: solid 2px white;
+    align-content: center;
+    margin-left: 5vw;
+}
+
+.media-2-right{
+    width: 50%;
+    margin-left: 5vw;
+}
+
+.media-title h2 {
+    margin: 0;
+    color: #ff8305;
+    width: inherit;
+}
+
+.media-title h3 {
+    margin: 0 0 1vh 0;
+    color: white;
+}
+
+.media-2 h2{
+    color: #ff8305;
+    width: 50%;
+}
+
+.media-2 h3 {
+    width: 50%;
+}
+
+.media-2-info {
+    margin-bottom: 1vh;
+}
+
+.media-2-info, .media-3-info {
+    margin-right: 6vw;
+    background-color:rgba(0,0,0,0.8);
+    border-top: 2px solid #ff8305;
+    padding: 0 1vw 1vh 1vw;
+    
+}
+
+.media-3-container {
+    display: flex;
+    height: inherit;
+    margin-top: 4vw;
+}
+
+.media-3-left, .media-3-right {
+    height: 70%;
+    width: 50%;
+}
+
+.media-3-left{
+    border-right: solid 2px white;
+}
+
+.media-3-right {
+    margin-left: 5vw;
+}
+
+.media-3-link a{
+    text-decoration: none;
+}
+
+.media-content {
+    height: inherit;
+}
+
+.media-content iframe {
+    border: solid 1px #ff8305;
+    margin-left: 1vw;
 }
 
 .visible {

@@ -2,6 +2,9 @@
 
 document.addEventListener("DOMContentLoaded", function(){
     var currSection = 0;
+    var currPage = 0;
+    var imgIndex = 0;
+    imgSlider();
     
     //Section vars
     var titleSection = document.querySelector('.title');
@@ -25,12 +28,17 @@ document.addEventListener("DOMContentLoaded", function(){
     var gaming1right = document.querySelector('.gaming-1-right');
     var gaming2 = document.querySelector('.gaming-2');
     var gaming2right = document.querySelector('.gaming-2-right');
+    var media1 = document.querySelector('.media-1');
+    var media2 = document.querySelector('.media-2');
+    var media3 = document.querySelector('.media-3');
     
     //Page Event Listeners
     page1.addEventListener("click", displayPage1);
     page2.addEventListener("click", displayPage2);
     page3.addEventListener("click", displayPage3);
     
+    
+    //Gaming scroll event listeners
     gaming1.addEventListener("wheel", function(e) {
         if(e.deltaY > 0) {
             displayPage2();
@@ -55,20 +63,74 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
     
+    //Media scroll event Listeners
+    media1.addEventListener("wheel", function(e) {
+        if(e.deltaY > 0) {
+            displayPage2();
+        }
+    });
+    
+    media2.addEventListener("wheel", function(e) {
+        if(e.deltaY > 0) {
+            displayPage3();
+        }
+    });
+    
+    media3.addEventListener("wheel", function(e) {
+        if(e.deltaY < 0) {
+            displayPage2();
+        }
+    });
+    
+    media2.addEventListener("wheel", function(e) {
+        if(e.deltaY < 0) {
+            displayPage1();
+        }
+    });
+    
+    //Change img in image slider
+    function imgSlider(){
+        var slides = document.getElementsByClassName("esportsSlider");
+        for (var i=0; i< slides.length; i++){
+            slides[i].style.display = "none";
+        }
+        imgIndex++;
+        if (imgIndex > slides.length){
+            imgIndex = 1;
+        }
+        slides[imgIndex-1].style.display = "block";
+        setTimeout(imgSlider, 3000);
+    }
+    
     //Section Event Listeners
     titleSection.addEventListener("click", setSection.bind(this, 0, 0));
     aboutSection.addEventListener("click", setSection.bind(this, 1, 0));
     engineerSection.addEventListener("click", setSection.bind(this, 2, 0));
     gamingSection.addEventListener("click", setSection.bind(this, 3, 2));
-    mediaSection.addEventListener("click", setSection.bind(this, 4, 0));
-
-    //Clear old pages, update tracker and display new pages
+    mediaSection.addEventListener("click", setSection.bind(this, 4, 3));
+    
+    
+    
+    //Clear old pages, update tracker, display new pages, update background
     function setSection(section, dots) {
         clearPages();
+        
         activeSection(section);
         currSection = section;
-        displayPage1(section);
+        
+        displayPage1();
         numOfPages(dots);
+        
+        var background = document.getElementsByTagName("BODY")[0];
+        var landingVid = document.getElementById("landingVid");
+        
+        if (section !== 0) {
+            landingVid.style.visibility = "hidden";
+            return background.style.backgroundImage = "url(_assets/img/background/background" + currSection + ".jpg)";
+        }
+        
+        landingVid.style.visibility = "visible";
+        
     }
     
     //Remove style from previous section and set to active section
@@ -171,6 +233,14 @@ document.addEventListener("DOMContentLoaded", function(){
         engineering1.classList.remove("visible");
         engineering1.classList.add("hidden");
         
+        //clear media
+        media1.classList.remove("visible");
+        media1.classList.add("hidden");
+        media2.classList.remove("visible");
+        media2.classList.add("hidden");
+        media3.classList.remove("visible");
+        media3.classList.add("hidden");
+        
         //reset page dots
         page1.innerHTML = '<img src="_assets/img/pageIcons/pages.svg">';
         page1.classList.remove("active");
@@ -205,6 +275,16 @@ document.addEventListener("DOMContentLoaded", function(){
             gaming2right.classList.remove("visible");
             gaming2right.classList.add("hidden");
         }
+        else if(currSection === 4) {
+            media1.classList.remove("hidden");
+            media1.classList.add("visible");
+            media2.classList.remove("visible");
+            media2.classList.add("hidden");
+            media3.classList.remove("visible");
+            media3.classList.add("hidden");
+        }
+        
+        currPage = 1;
         page1.innerHTML = '<img src="_assets/img/pageIcons/pages-orange.png">';
         page1.classList.add("active");
         page2.innerHTML = '<img src="_assets/img/pageIcons/pages.svg">';
@@ -234,6 +314,16 @@ document.addEventListener("DOMContentLoaded", function(){
             gaming2right.classList.remove("hidden");
             gaming2right.classList.add("visible");
         }
+        else if(currSection === 4) {
+            media1.classList.remove("visible");
+            media1.classList.add("hidden");
+            media2.classList.remove("hidden");
+            media2.classList.add("visible");
+            media3.classList.remove("visible");
+            media3.classList.add("hidden");
+        }   
+        
+        currPage = 2;
         page1.innerHTML = '<img src="_assets/img/pageIcons/pages.svg">';
         page1.classList.remove("active");
         page2.innerHTML = '<img src="_assets/img/pageIcons/pages-orange.png">';
@@ -263,11 +353,21 @@ document.addEventListener("DOMContentLoaded", function(){
             gaming2right.classList.remove("visible");
             gaming2right.classList.add("hidden");
         }
+        else if(currSection === 4) {
+            media1.classList.remove("visible");
+            media1.classList.add("hidden");
+            media2.classList.remove("visible");
+            media2.classList.add("hidden");
+            media3.classList.remove("hidden");
+            media3.classList.add("visible");
+        }
+        
+        currPage = 3;
         page1.innerHTML = '<img src="_assets/img/pageIcons/pages.svg">';
         page1.classList.remove("active");
         page2.innerHTML = '<img src="_assets/img/pageIcons/pages.svg">';
         page2.classList.remove("active");
         page3.innerHTML = '<img src="_assets/img/pageIcons/pages-orange.png">';
-        page1.classList.add("active");
+        page3.classList.add("active");
     }
 });
