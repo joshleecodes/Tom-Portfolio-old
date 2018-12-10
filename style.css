@@ -8,7 +8,7 @@ body {
     font-size: 100%;
     font-family: 'PT Sans', sans-serif;
     text-align: center;
-    object-fit: cover;
+    background-size: cover;
     overflow: hidden;
 }
 
@@ -469,8 +469,19 @@ nav a:hover:after {
 }
 
 .media-content iframe {
-    border: solid 1px #ff8305;
+    border: solid 2px #ff8305;
     margin-left: 1vw;
+}
+
+iframe {
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+}
+
+#ytplayer2 {
+    width: 75%;
+    height: 75%;
 }
 
 .visible {
@@ -492,9 +503,14 @@ nav a:hover:after {
 */
 
 
-@media (max-width: 720px) {
-    .title h1 h2 {
-        font-size: 0.5em;
+@media (max-width: 1280px) {
+
+    p {
+        font-size: 0.8em;
+    }
+    
+    .module {
+        font-size: 0.8em;
     }
 }
 
