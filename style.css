@@ -8,7 +8,7 @@ body {
     font-size: 100%;
     font-family: 'PT Sans', sans-serif;
     text-align: center;
-    object-fit: cover;
+    background-size: cover;
     overflow: hidden;
 }
 
@@ -321,13 +321,16 @@ nav a:hover:after {
 
 .esportsSlider {
     display: none;
-    width: inherit;
     height: inherit;
     transition: all 0.4s;
 }
 
 .gaming-2, .gaming-2-right {
     background-color:rgba(0,0,0,0.8);
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .gaming-2 {
@@ -365,8 +368,7 @@ nav a:hover:after {
 
 .result-img {
     height: 5vh;
-    align-self: center;
-    margin: 0vh 0vw 5vh 1vw;
+    margin: 2vh 0vw 5vh 1vw;
     font-size: 2.5em;
 }
 
@@ -473,6 +475,16 @@ nav a:hover:after {
     margin-left: 1vw;
 }
 
+iframe {
+    width: 90%;
+    height: 90%;
+}
+
+#ytplayer2 {
+    width: 75%;
+    height: 75%;
+}
+
 .visible {
     opacity: 1;
     visibility: visible;
@@ -492,10 +504,34 @@ nav a:hover:after {
 */
 
 
-@media (max-width: 720px) {
-    .title h1 h2 {
-        font-size: 0.5em;
+@media (max-width: 1280px) {
+    
+    p {
+        font-size: 0.8em;
     }
+
+    .social-media img {
+        width: 2vw;
+    }
+    
+    .module {
+        font-size: 0.75em;
+    }
+
+    .org-img {
+        height: 15vh;
+    }
+
+    
+    .event-date p {
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+    
+    .gaming-2 h3, .gaming-2-right h3 {
+        font-size: 1.25em;
+    }
+    
 }
 
 
