@@ -1,30 +1,12 @@
 TO DO:
 
 
-Look at typography
-
-landing page vid stretched
-Media page - Sort recommended videos - stop video when changing page
-Change all images to svg format
 media queries (from tablets to desktop)
 
 
 Look into shared classes for pages (eg. <div class="about page1"> and <div class="gaming page1">)
 remove temp folder
-
-
-FONT: 
-
-original - (in body)
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-font-family: "Lato", sans-serif;
-
-Test 1 -
-<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,900' rel='stylesheet' type='text/css'>
-font-family: 'PT Sans', sans-serif;
-
-Test 2 - 
+remove assets backup folder
 
 
 USEFUL LINKS:

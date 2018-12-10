@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function(){
     var media1 = document.querySelector('.media-1');
     var media2 = document.querySelector('.media-2');
     var media3 = document.querySelector('.media-3');
+    var ytVidArray = document.getElementsByTagName("iframe");
+    
     
     //Page Event Listeners
     page1.addEventListener("click", displayPage1);
@@ -109,7 +111,14 @@ document.addEventListener("DOMContentLoaded", function(){
     gamingSection.addEventListener("click", setSection.bind(this, 3, 2));
     mediaSection.addEventListener("click", setSection.bind(this, 4, 3));
     
-    
+    //pause video function
+    function pauseVid(){
+        var i;
+        for(i=0; i<ytVidArray.length; i++){
+            ytVidArray[i].contentWindow.postMessage
+            ('{"event":"command","func":"pauseVideo","args":""}', '*')
+        }
+    }
     
     //Clear old pages, update tracker, display new pages, update background
     function setSection(section, dots) {
@@ -208,7 +217,6 @@ document.addEventListener("DOMContentLoaded", function(){
     
     
     function clearPages(){
-        
         //clear landing page
         title1.classList.remove("visible");
         title1.classList.add("hidden");
@@ -251,6 +259,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     
     function displayPage1() {
+        pauseVid();
         if(currSection === 0){
             title1.classList.remove("hidden");
             title1.classList.add("visible");
@@ -285,7 +294,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         
         currPage = 1;
-        page1.innerHTML = '<img src="_assets/img/pageIcons/pages-orange.png">';
+        page1.innerHTML = '<img src="_assets/img/pageIcons/pages-orange.svg">';
         page1.classList.add("active");
         page2.innerHTML = '<img src="_assets/img/pageIcons/pages.svg">';
         page2.classList.remove("active");
@@ -294,6 +303,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     function displayPage2() {
+        pauseVid();
         if(currSection === 1) {
             about1.classList.remove("visible");
             about1.classList.add("hidden");
@@ -326,13 +336,14 @@ document.addEventListener("DOMContentLoaded", function(){
         currPage = 2;
         page1.innerHTML = '<img src="_assets/img/pageIcons/pages.svg">';
         page1.classList.remove("active");
-        page2.innerHTML = '<img src="_assets/img/pageIcons/pages-orange.png">';
+        page2.innerHTML = '<img src="_assets/img/pageIcons/pages-orange.svg">';
         page2.classList.add("active");
         page3.innerHTML = '<img src="_assets/img/pageIcons/pages.svg">';
         page3.classList.remove("active");
     }
 
     function displayPage3(section) {
+        pauseVid();
         if(section === 1) {
             about1.classList.remove("visible");
             about1.classList.add("hidden");
@@ -367,7 +378,7 @@ document.addEventListener("DOMContentLoaded", function(){
         page1.classList.remove("active");
         page2.innerHTML = '<img src="_assets/img/pageIcons/pages.svg">';
         page2.classList.remove("active");
-        page3.innerHTML = '<img src="_assets/img/pageIcons/pages-orange.png">';
+        page3.innerHTML = '<img src="_assets/img/pageIcons/pages-orange.svg">';
         page3.classList.add("active");
     }
 });

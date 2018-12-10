@@ -1,8 +1,9 @@
 <head>
     <meta charset="utf-8">
     <title> Thomas Lee</title>
-    <link id="favicon" rel="icon" href="_assets/img/other/favicon.png">
+    <link id="favicon" rel="icon" href="_assets/img/other/favicon.svg">
     <meta name="description" content="Personal Portfolio Website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
@@ -20,24 +21,24 @@
         </div>
         <div class="social-media">
             <a class="twitter" href="https://twitter.com/G2SHAS" target="_blank">
-                <img class="top-img" src="_assets/img/socialmedia/Twitter/twitter-white.png">
-                <img class="bottom-img" src="_assets/img/socialmedia/Twitter/twitter-orange.png">
+                <img class="top-img" src="_assets/img/socialmedia/Twitter/twitter-white.svg">
+                <img class="bottom-img" src="_assets/img/socialmedia/Twitter/twitter-orange.svg">
             </a>
             <a class="twitch" href="https://www.twitch.tv/shas_o_udas" target="_blank">
-                <img class="top-img" src="_assets/img/socialmedia/Twitch/twitch-white.png">
-                <img class="bottom-img" src="_assets/img/socialmedia/Twitch/twitch-orange.png">
+                <img class="top-img" src="_assets/img/socialmedia/Twitch/twitch-white.svg">
+                <img class="bottom-img" src="_assets/img/socialmedia/Twitch/twitch-orange.svg">
             </a>
             <a class="linkedIn" href="https://www.linkedin.com/in/thomas-lee-6197546a/" target="_blank">
-                <img class="top-img" src="_assets/img/socialmedia/LinkedIn/linkedin-white.png">
-                <img class="bottom-img" src="_assets/img/socialmedia/LinkedIn/linkedin-orange.png">
+                <img class="top-img" src="_assets/img/socialmedia/LinkedIn/linkedin-white.svg">
+                <img class="bottom-img" src="_assets/img/socialmedia/LinkedIn/linkedin-orange.svg">
             </a>
             <a class="liquipedia" href="https://liquipedia.net/rainbowsix/Shas(O)Udas" target="_blank">
-                <img class="top-img" src="_assets/img/socialmedia/Liquipedia/liquid-white.png">
-                <img class="bottom-img" src="_assets/img/socialmedia/Liquipedia/liquid-orange.png">
+                <img class="top-img" src="_assets/img/socialmedia/Liquipedia/liquid-white.svg">
+                <img class="bottom-img" src="_assets/img/socialmedia/Liquipedia/liquid-orange.svg">
             </a>
             <a class="email" href="mailto:shas@g2esports.com">
-                <img class="top-img" src="_assets/img/socialmedia/Email/email-white.png">
-                <img class="bottom-img" src="_assets/img/socialmedia/Email/email-orange.png">
+                <img class="top-img" src="_assets/img/socialmedia/Email/email-white.svg">
+                <img class="bottom-img" src="_assets/img/socialmedia/Email/email-orange.svg">
             </a>
         </div>
         <nav class="nav">
@@ -48,14 +49,15 @@
             <a class="resume" href="_assets/CV_Thomas_Lee_Sept_2018.pdf" target="_blank">RESUME</a>
         </nav>
     </header>
+    
     <div class="content-wrapper">
         <section class="side-section">
-            <a class="page-1 active page-hidden"><img src="_assets/img/pageIcons/pages-orange.png"></a>
+            <a class="page-1 active page-hidden"><img src="_assets/img/pageIcons/pages-orange.svg"></a>
             <a class="page-2 page-hidden"><img src="_assets/img/pageIcons/pages.svg"></a>
             <a class="page-3 page-hidden"><img src="_assets/img/pageIcons/pages.svg"></a>
         </section>
         <section class="main-section">
-            <img class="entry-img layered visible" src="_assets/img/other/TomLeeLogo.png">
+            <img class="entry-img layered visible" src="_assets/img/other/TomLeeLogo.svg">
             <div class="engineering-1 layered hidden">
                 <div class="module-container">
                     <div class="label-wrapper">
@@ -150,7 +152,7 @@
             <div class="media-1 layered hidden">
                 <div class="media-1-left">
                     <div class="media-content">
-                        <iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/_q9y9BtF55c?color=white&rel=0" frameborder="0" allowfullscreen></iframe>
+                        <iframe id="ytplayer" class="ytVid" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/_q9y9BtF55c?color=white&rel=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="media-1-right">
@@ -183,7 +185,7 @@
                         </p>
                     </div>
                     <div class="media-content">
-                        <iframe id="ytplayer" type="text/html" width="560" height="315" src="https://www.youtube.com/embed/cSDWcS5pvd0?color=white" frameborder="0" allowfullscreen></iframe>
+                        <iframe id="ytplayer" class="ytVid" type="text/html" width="560" height="315" src="https://www.youtube.com/embed/cSDWcS5pvd0?color=white&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="media-2-right">
@@ -197,7 +199,7 @@
                         </p>
                     </div>
                     <div class="media-content">
-                        <iframe id="ytplayer" type="text/html" width="560" height="315" src="https://www.youtube.com/embed/cwcoEJVA15U?color=white" frameborder="0" allowfullscreen></iframe>
+                        <iframe id="ytplayer" class="ytVid" type="text/html" width="560" height="315" src="https://www.youtube.com/embed/cwcoEJVA15U?color=white&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -266,28 +268,36 @@
                 </div>
                 <div class="gaming-2 content-left hidden layered">
                     <div class="event">
-                        <img class="org-img" src="_assets/img/sections/esports/G2.png">
+                        <img class="org-img" src="_assets/img/sections/esports/G2.svg">
+                        <div class="event-info">
+                            <a class="event-name"><h3>Six Invitational 2019</h3></a>
+                            <a class="event-date"><p>CANADA - MONTREAL - 2019/02/11 - Prize pool: $1,000,000+</p></a>
+                        </div>
+                        <h2 class="result-img">?</h2>
+                    </div>
+                    <div class="event">
+                        <img class="org-img" src="_assets/img/sections/esports/G2.svg">
+                        <div class="event-info">
+                            <a class="event-name"><h3>Pro League Season 8 - Finals</h3></a>
+                            <a class="event-date"><p>BRAZIL - RIO DE JANEIRO - 2018/11/17 - $75,000</p></a>
+                        </div>
+                        <img class="result-img" src="_assets/img/sections/esports/Gold.svg">
+                    </div>
+                    <div class="event">
+                        <img class="org-img" src="_assets/img/sections/esports/G2.svg">
                         <div class="event-info">
                             <a class="event-name"><h3>Six Major</h3></a>
                             <a class="event-date"><p>FRANCE, PARIS - 2018/08/19 - $150,000</p></a>
                         </div>
-                        <img class="result-img" src="_assets/img/sections/esports/Gold.png">
+                        <img class="result-img" src="_assets/img/sections/esports/Gold.svg">
                     </div>
                     <div class="event">
-                        <img class="org-img" src="_assets/img/sections/esports/PENTA.png">
+                        <img class="org-img" src="_assets/img/sections/esports/PENTA.svg">
                         <div class="event-info">
                             <a class="event-name"><h3>Pro League Season 7 - Finals</h3></a>
                             <a class="event-date"><p>USA, ATLANTIC CITY - 2018/05/20 - $30,000</p></a>
                         </div>
-                        <img class="result-img" src="_assets/img/sections/esports/Silver.png">
-                    </div>
-                    <div class="event">
-                        <img class="org-img" src="_assets/img/sections/esports/PENTA.png">
-                        <div class="event-info">
-                            <a class="event-name"><h3>Six Invitational 2018</h3></a>
-                            <a class="event-date"><p>CANADA, MONTREAL - 2018/02/18 - $200,000</p></a>
-                        </div>
-                        <img class="result-img" src="_assets/img/sections/esports/Gold.png">
+                        <img class="result-img" src="_assets/img/sections/esports/Silver.svg">
                     </div>
                 </div>
             </div>
@@ -314,28 +324,36 @@
                 </div>
                 <div class="gaming-2-right content-right hidden layered">
                     <div class="event">
-                        <img class="org-img" src="_assets/img/sections/esports/PENTA.png">
+                        <img class="org-img" src="_assets/img/sections/esports/PENTA.svg">
                         <div class="event-info">
-                            <a class="event-name"><h3>Pro League Year 2 Season 3 - Finals</h3></a>
-                            <a class="event-date"><p>BRAZIL, SAO PAULO - 2017/11/19 - $16,142</p></a>
+                            <a class="event-name"><h3>Six Invitational 2018</h3></a>
+                            <a class="event-date"><p>CANADA, MONTREAL - 2018/02/18 - $200,000</p></a>
                         </div>
-                        <img class="result-img" src="_assets/img/sections/esports/Bronze.png">
+                        <img class="result-img" src="_assets/img/sections/esports/Gold.svg">
                     </div>
                     <div class="event">
-                        <img class="org-img" src="_assets/img/sections/esports/PENTA.png">
+                        <img class="org-img" src="_assets/img/sections/esports/PENTA.svg">
+                        <div class="event-info">
+                            <a class="event-name"><h3>Pro League Year 2 Season 3 - Finals</h3></a>
+                            s<a class="event-date"><p>BRAZIL, SAO PAULO - 2017/11/19 - $16,142</p></a>
+                        </div>
+                        <img class="result-img" src="_assets/img/sections/esports/Bronze.svg">
+                    </div>
+                    <div class="event">
+                        <img class="org-img" src="_assets/img/sections/esports/PENTA.svg">
                         <div class="event-info">
                             <a class="event-name"><h3>Pro League Year 2 Season 2 - Finals</h3></a>
                             <a class="event-date"><p>GERMANY, COLOGNE - 2017/08/26 - $75,000</p></a>
                         </div>
-                        <img class="result-img" src="_assets/img/sections/esports/Gold.png">
+                        <img class="result-img" src="_assets/img/sections/esports/Gold.svg">
                     </div>
                     <div class="event">
-                        <img class="org-img" src="_assets/img/sections/esports/PENTA.png">
+                        <img class="org-img" src="_assets/img/sections/esports/PENTA.svg">
                         <div class="event-info">
                             <a class="event-name"><h3>Pro League Year 2 Season 1 - Finals</h3></a>
                             <a class="event-date"><p>POLAND, KATOWICE - 2017/05/21 - $75,000</p></a>
                         </div>
-                        <img class="result-img" src="_assets/img/sections/esports/Gold.png">
+                        <img class="result-img" src="_assets/img/sections/esports/Gold.svg">
                     </div>
                 </div>
             </div>

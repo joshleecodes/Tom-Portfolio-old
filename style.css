@@ -8,7 +8,7 @@ body {
     font-size: 100%;
     font-family: 'PT Sans', sans-serif;
     text-align: center;
-    background-size: cover;
+    object-fit: cover;
     overflow: hidden;
 }
 
@@ -39,7 +39,7 @@ h3 {
     bottom: 0;
     height: 100vh;
     width: 100vw;
-    object-fit: fill;
+    object-fit: cover;
     z-index: 0;
     visibility: visible;
 }
@@ -303,7 +303,7 @@ nav a:hover:after {
 
 .gaming-1-description {
     background-color:rgba(0,0,0,0.8);
-    border-top: 2px solid white;
+    border-top: 2px solid #ff8305;
     padding: 0 1vw 1vh 1vw;
 }
 
@@ -313,10 +313,10 @@ nav a:hover:after {
 }
 
 .imgSlider {
-    border: 3px solid #ff8305;
+    border: 5px solid white;
     background-size: contain;
-    width: 31vw;
-    height: 34.15vh;
+    width: 30vw;
+    height: 30vh;
 }
 
 .esportsSlider {
@@ -336,7 +336,6 @@ nav a:hover:after {
 
 .event {
     display: flex;
-    justify-content; 
     max-width: 35vw;
 }
 
@@ -368,6 +367,7 @@ nav a:hover:after {
     height: 5vh;
     align-self: center;
     margin: 0vh 0vw 5vh 1vw;
+    font-size: 2.5em;
 }
 
 .media-1, .media-2, .media-3 {
@@ -484,17 +484,29 @@ nav a:hover:after {
 }
 
 
-//mobile res layout
+/*
+//mobile res layout (implement later)
 @media only screen and (max-width: 320px) {
     
 }
+*/
 
-//tablet or laptop res layout
-@media only screen and (max-width: 720px) {
+
+@media (max-width: 720px) {
+    .title h1 h2 {
+        font-size: 0.5em;
+    }
+}
+
+
+/*
+//desktop high-res layout
+@media only screen and (max-width: 5120px) {
+
+    .title {
+        display: none;
+    }
     
 }
 
-//desktop res layout
-@media only screen and (max-width: 1024px) {
-    
-}
+*/
