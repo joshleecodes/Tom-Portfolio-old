@@ -189,20 +189,14 @@ nav a:hover:after {
     display: flex;
     width: 75vw;
     height: 86vh;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     overflow: hidden;
     margin: 0 5vw;
     text-align: left;
 }
 
-.main-left {
-    display: flex;
-    width: 37.5vw;
-    justify-content: space-around;
-}
-
-.main-right {
+.main-left, .main-right {
     display: flex;
     width: 37.5vw;
     justify-content: space-around;
@@ -313,15 +307,16 @@ nav a:hover:after {
 }
 
 .imgSlider {
-    border: 5px solid white;
     background-size: contain;
     width: 30vw;
     height: 30vh;
 }
 
 .esportsSlider {
+    border-top: 2px solid white;
     display: none;
-    height: inherit;
+    width: inherit;
+    height: auto;
     transition: all 0.4s;
 }
 
@@ -343,7 +338,7 @@ nav a:hover:after {
 }
 
 .org-img {
-    height: 15vh;
+    height: 12.5vh;
 }
 
 .event-info {
@@ -385,12 +380,12 @@ nav a:hover:after {
 }
 
 .media-1-left{
-    width: 55%;
-    margin-top: 2vw;
+    width: 45%;
 }
 
 .media-1-right{
-    width: 45%;
+    width: 55%;
+    margin-top: 3.5vw;
 }
 
 .media-info {
@@ -401,14 +396,12 @@ nav a:hover:after {
 
 .media-2-left {
     width: 50%;
-    border-right: solid 2px white;
     align-content: center;
     margin-left: 5vw;
 }
 
 .media-2-right{
     width: 50%;
-    margin-left: 5vw;
 }
 
 .media-title h2 {
@@ -433,6 +426,7 @@ nav a:hover:after {
 
 .media-2-info {
     margin-bottom: 1vh;
+    width: 80%;
 }
 
 .media-2-info, .media-3-info {
@@ -454,14 +448,6 @@ nav a:hover:after {
     width: 50%;
 }
 
-.media-3-left{
-    border-right: solid 2px white;
-}
-
-.media-3-right {
-    margin-left: 5vw;
-}
-
 .media-3-link a{
     text-decoration: none;
 }
@@ -471,18 +457,22 @@ nav a:hover:after {
 }
 
 .media-content iframe {
-    border: solid 1px #ff8305;
+    border-top: solid 2px white;
     margin-left: 1vw;
+    margin-bottom: 2px;
 }
 
-iframe {
-    width: 90%;
-    height: 90%;
+#ytplayer {
+    width: 102%;
+    height: 102%;
+    margin-top: -3px;
+    margin-left: 0px;
 }
 
 #ytplayer2 {
-    width: 75%;
-    height: 75%;
+    width: 85%;
+    height: 85%;
+    margin-left: 0px;
 }
 
 .visible {
